@@ -371,7 +371,7 @@
   { register size_t nn = (size_t)(n); \
     if (nn >= breakeven_point) memset((d), (int)(c), nn); \
     else if (nn > 0) { /* proc call overhead is worth only for large strings*/\
-      register char *dd; register const int cc=(int)(c); \
+      register char *dd; register const char cc=(char)(c); \
       for (dd=(d); nn>0; nn--) *dd++ = cc; } }
 
 /* prototypes */

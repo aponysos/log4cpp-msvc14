@@ -73,7 +73,7 @@ namespace log4cpp {
 	void DailyRollingFileAppender::rollOver()
 	{
 		std::ostringstream filename_s;
-		int res_close = ::close(_fd);
+		int res_close = ::_close(_fd);
 		if (res_close != 0) {
 			std::cerr << "Error closing file " << _fileName << std::endl;
 		}
@@ -86,7 +86,7 @@ namespace log4cpp {
 			std::cerr << "Error renaming file " << _fileName << " to " << lastFn << std::endl;
 		}
 
-		_fd = ::open(_fileName.c_str(), _flags, _mode);
+		::_sopen_s(&_fd, _fileName.c_str(), _flags, _mode, _S_IREAD | _S_IWRITE);
 		if (_fd == -1) {
 			std::cerr << "Error opening file " << _fileName << std::endl;
 		}
@@ -135,7 +135,7 @@ namespace log4cpp {
 			int res = ::stat(fullfilename.c_str(), &statBuf);
             if (res != -1 && statBuf.st_mtime < oldest && !(ffd.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) {
                 std::cout << "Deleting " << fullfilename << "\n";
-				::unlink(fullfilename.c_str());
+				::_unlink(fullfilename.c_str());
             }
         } while (FindNextFile(hFind, &ffd) != 0);
 

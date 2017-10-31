@@ -135,8 +135,10 @@ namespace log4cpp {
                 if (key == "${") {
                     result += "${";
                 } else {
-                    char* env_value = std::getenv(key.c_str());
-                    if (env_value) {
+                    //char* env_value = std::getenv(key.c_str());
+                    char* env_value = NULL;
+                    size_t buffer_count = 0;
+                    if (0 == ::_dupenv_s(&env_value, &buffer_count, key.c_str())) {
                         result += env_value;
                     } else {
                         const_iterator it = find(key);

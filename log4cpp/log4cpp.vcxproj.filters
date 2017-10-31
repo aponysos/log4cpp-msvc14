@@ -69,9 +69,6 @@
     <ClCompile Include="..\src\HierarchyMaintainer.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\IdsaAppender.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\LayoutAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -94,9 +91,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\NDC.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\NTEventLogAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\OmniThreads.cpp">
@@ -129,9 +123,6 @@
     <ClCompile Include="..\src\PThreads.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\RemoteSyslogAppender.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\RollingFileAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -141,25 +132,34 @@
     <ClCompile Include="..\src\SimpleLayout.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\SmtpAppender.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\snprintf.c">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\StringQueueAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\StringUtil.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\SyslogAppender.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\TimeStamp.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\TriggeringEventEvaluatorFactory.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\snprintf.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\IdsaAppender.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\NTEventLogAppender.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RemoteSyslogAppender.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SmtpAppender.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SyslogAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\Win32DebugAppender.cpp">
@@ -248,9 +248,6 @@
     <ClInclude Include="..\include\log4cpp\HierarchyMaintainer.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\log4cpp\IdsaAppender.hh">
-      <Filter>include\log4cpp</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\log4cpp\Layout.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
@@ -272,9 +269,6 @@
     <ClInclude Include="..\include\log4cpp\NDC.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\log4cpp\NTEventLogAppender.hh">
-      <Filter>include\log4cpp</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\log4cpp\OstreamAppender.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
@@ -293,9 +287,6 @@
     <ClInclude Include="..\include\log4cpp\PropertyConfigurator.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\log4cpp\RemoteSyslogAppender.hh">
-      <Filter>include\log4cpp</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\log4cpp\RollingFileAppender.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
@@ -305,13 +296,7 @@
     <ClInclude Include="..\include\log4cpp\SimpleLayout.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\log4cpp\SmtpAppender.hh">
-      <Filter>include\log4cpp</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\log4cpp\StringQueueAppender.hh">
-      <Filter>include\log4cpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\SyslogAppender.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
     <ClInclude Include="..\include\log4cpp\TimeStamp.hh">
@@ -321,9 +306,6 @@
       <Filter>include\log4cpp</Filter>
     </ClInclude>
     <ClInclude Include="..\include\log4cpp\TriggeringEventEvaluatorFactory.hh">
-      <Filter>include\log4cpp</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\Win32DebugAppender.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
     <ClInclude Include="..\include\log4cpp\threading\BoostThreads.hh">
@@ -343,6 +325,24 @@
     </ClInclude>
     <ClInclude Include="..\include\log4cpp\threading\Threading.hh">
       <Filter>include\log4cpp\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\log4cpp\IdsaAppender.hh">
+      <Filter>include\log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\log4cpp\NTEventLogAppender.hh">
+      <Filter>include\log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\log4cpp\RemoteSyslogAppender.hh">
+      <Filter>include\log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\log4cpp\SmtpAppender.hh">
+      <Filter>include\log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\log4cpp\SyslogAppender.hh">
+      <Filter>include\log4cpp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\log4cpp\Win32DebugAppender.hh">
+      <Filter>include\log4cpp</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

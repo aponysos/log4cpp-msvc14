@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{1CF09EC7-21F1-4122-9509-9598F3209AFC}</ProjectGuid>
+    <RootNamespace>log4cpp</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intdir\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)output\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)intdir\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\AbortAppender.cpp" />
+    <ClCompile Include="..\src\Appender.cpp" />
+    <ClCompile Include="..\src\AppendersFactory.cpp" />
+    <ClCompile Include="..\src\AppenderSkeleton.cpp" />
+    <ClCompile Include="..\src\BasicConfigurator.cpp" />
+    <ClCompile Include="..\src\BasicLayout.cpp" />
+    <ClCompile Include="..\src\BufferingAppender.cpp" />
+    <ClCompile Include="..\src\Category.cpp" />
+    <ClCompile Include="..\src\CategoryStream.cpp" />
+    <ClCompile Include="..\src\Configurator.cpp" />
+    <ClCompile Include="..\src\DailyRollingFileAppender.cpp" />
+    <ClCompile Include="..\src\DllMain.cpp" />
+    <ClCompile Include="..\src\DummyThreads.cpp" />
+    <ClCompile Include="..\src\FactoryParams.cpp" />
+    <ClCompile Include="..\src\FileAppender.cpp" />
+    <ClCompile Include="..\src\Filter.cpp" />
+    <ClCompile Include="..\src\FixedContextCategory.cpp" />
+    <ClCompile Include="..\src\HierarchyMaintainer.cpp" />
+    <ClCompile Include="..\src\IdsaAppender.cpp" />
+    <ClCompile Include="..\src\LayoutAppender.cpp" />
+    <ClCompile Include="..\src\LayoutsFactory.cpp" />
+    <ClCompile Include="..\src\LevelEvaluator.cpp" />
+    <ClCompile Include="..\src\Localtime.cpp" />
+    <ClCompile Include="..\src\LoggingEvent.cpp" />
+    <ClCompile Include="..\src\Manipulator.cpp" />
+    <ClCompile Include="..\src\MSThreads.cpp" />
+    <ClCompile Include="..\src\NDC.cpp" />
+    <ClCompile Include="..\src\NTEventLogAppender.cpp" />
+    <ClCompile Include="..\src\OmniThreads.cpp" />
+    <ClCompile Include="..\src\OstreamAppender.cpp" />
+    <ClCompile Include="..\src\PassThroughLayout.cpp" />
+    <ClCompile Include="..\src\PatternLayout.cpp" />
+    <ClCompile Include="..\src\PortabilityImpl.cpp" />
+    <ClCompile Include="..\src\Priority.cpp" />
+    <ClCompile Include="..\src\Properties.cpp" />
+    <ClCompile Include="..\src\PropertyConfigurator.cpp" />
+    <ClCompile Include="..\src\PropertyConfiguratorImpl.cpp" />
+    <ClCompile Include="..\src\PThreads.cpp" />
+    <ClCompile Include="..\src\RemoteSyslogAppender.cpp" />
+    <ClCompile Include="..\src\RollingFileAppender.cpp" />
+    <ClCompile Include="..\src\SimpleConfigurator.cpp" />
+    <ClCompile Include="..\src\SimpleLayout.cpp" />
+    <ClCompile Include="..\src\SmtpAppender.cpp" />
+    <ClCompile Include="..\src\snprintf.c" />
+    <ClCompile Include="..\src\StringQueueAppender.cpp" />
+    <ClCompile Include="..\src\StringUtil.cpp" />
+    <ClCompile Include="..\src\SyslogAppender.cpp" />
+    <ClCompile Include="..\src\TimeStamp.cpp" />
+    <ClCompile Include="..\src\TriggeringEventEvaluatorFactory.cpp" />
+    <ClCompile Include="..\src\Win32DebugAppender.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\log4cpp\AbortAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\Appender.hh" />
+    <ClInclude Include="..\include\log4cpp\AppendersFactory.hh" />
+    <ClInclude Include="..\include\log4cpp\AppenderSkeleton.hh" />
+    <ClInclude Include="..\include\log4cpp\BasicConfigurator.hh" />
+    <ClInclude Include="..\include\log4cpp\BasicLayout.hh" />
+    <ClInclude Include="..\include\log4cpp\BufferingAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\Category.hh" />
+    <ClInclude Include="..\include\log4cpp\CategoryStream.hh" />
+    <ClInclude Include="..\include\log4cpp\config-MinGW32.h" />
+    <ClInclude Include="..\include\log4cpp\config-openvms.h" />
+    <ClInclude Include="..\include\log4cpp\config-win32-stlport-boost.h" />
+    <ClInclude Include="..\include\log4cpp\config-win32.h" />
+    <ClInclude Include="..\include\log4cpp\Configurator.hh" />
+    <ClInclude Include="..\include\log4cpp\convenience.h" />
+    <ClInclude Include="..\include\log4cpp\DailyRollingFileAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\Export.hh" />
+    <ClInclude Include="..\include\log4cpp\FactoryParams.hh" />
+    <ClInclude Include="..\include\log4cpp\FileAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\Filter.hh" />
+    <ClInclude Include="..\include\log4cpp\FixedContextCategory.hh" />
+    <ClInclude Include="..\include\log4cpp\HierarchyMaintainer.hh" />
+    <ClInclude Include="..\include\log4cpp\IdsaAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\Layout.hh" />
+    <ClInclude Include="..\include\log4cpp\LayoutAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\LayoutsFactory.hh" />
+    <ClInclude Include="..\include\log4cpp\LevelEvaluator.hh" />
+    <ClInclude Include="..\include\log4cpp\LoggingEvent.hh" />
+    <ClInclude Include="..\include\log4cpp\Manipulator.hh" />
+    <ClInclude Include="..\include\log4cpp\NDC.hh" />
+    <ClInclude Include="..\include\log4cpp\NTEventLogAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\OstreamAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\PassThroughLayout.hh" />
+    <ClInclude Include="..\include\log4cpp\PatternLayout.hh" />
+    <ClInclude Include="..\include\log4cpp\Portability.hh" />
+    <ClInclude Include="..\include\log4cpp\Priority.hh" />
+    <ClInclude Include="..\include\log4cpp\PropertyConfigurator.hh" />
+    <ClInclude Include="..\include\log4cpp\RemoteSyslogAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\RollingFileAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\SimpleConfigurator.hh" />
+    <ClInclude Include="..\include\log4cpp\SimpleLayout.hh" />
+    <ClInclude Include="..\include\log4cpp\SmtpAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\StringQueueAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\SyslogAppender.hh" />
+    <ClInclude Include="..\include\log4cpp\threading\BoostThreads.hh" />
+    <ClInclude Include="..\include\log4cpp\threading\DummyThreads.hh" />
+    <ClInclude Include="..\include\log4cpp\threading\MSThreads.hh" />
+    <ClInclude Include="..\include\log4cpp\threading\OmniThreads.hh" />
+    <ClInclude Include="..\include\log4cpp\threading\PThreads.hh" />
+    <ClInclude Include="..\include\log4cpp\threading\Threading.hh" />
+    <ClInclude Include="..\include\log4cpp\TimeStamp.hh" />
+    <ClInclude Include="..\include\log4cpp\TriggeringEventEvaluator.hh" />
+    <ClInclude Include="..\include\log4cpp\TriggeringEventEvaluatorFactory.hh" />
+    <ClInclude Include="..\include\log4cpp\Win32DebugAppender.hh" />
+    <ClInclude Include="..\src\Localtime.hh" />
+    <ClInclude Include="..\src\PortabilityImpl.hh" />
+    <ClInclude Include="..\src\Properties.hh" />
+    <ClInclude Include="..\src\PropertyConfiguratorImpl.hh" />
+    <ClInclude Include="..\src\StringUtil.hh" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

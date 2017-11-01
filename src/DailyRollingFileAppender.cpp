@@ -86,7 +86,7 @@ namespace log4cpp {
 			std::cerr << "Error renaming file " << _fileName << " to " << lastFn << std::endl;
 		}
 
-		::_sopen_s(&_fd, _fileName.c_str(), _flags, _S_IREAD | _S_IWRITE, _mode);
+		::_sopen_s(&_fd, _fileName.c_str(), _flags, _SH_DENYWR, _S_IREAD | _S_IWRITE);
 		if (_fd == -1) {
 			std::cerr << "Error opening file " << _fileName << std::endl;
 		}

@@ -34,7 +34,7 @@ namespace log4cpp {
             _mode(mode) {
         if (!append)
             _flags |= O_TRUNC;
-        ::_sopen_s(&_fd, _fileName.c_str(), _flags, _S_IREAD | _S_IWRITE, _mode);
+        ::_sopen_s(&_fd, _fileName.c_str(), _flags, _SH_DENYWR, _S_IREAD | _S_IWRITE);
     }
     
     FileAppender::FileAppender(const std::string& name, int fd) :
@@ -86,7 +86,7 @@ namespace log4cpp {
     bool FileAppender::reopen() {
         if (_fileName != "") {
             int fd = -1;
-            ::_sopen_s(&fd, _fileName.c_str(), _flags, _S_IREAD | _S_IWRITE, _mode);
+            ::_sopen_s(&fd, _fileName.c_str(), _flags, _SH_DENYWR, _S_IREAD | _S_IWRITE);
             if (fd < 0)
                 return false;
             else {

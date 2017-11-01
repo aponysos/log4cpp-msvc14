@@ -78,7 +78,7 @@ namespace log4cpp {
             // new file will be numbered 1
             ::rename(_fileName.c_str(), last_log_filename.c_str());
         }
-        ::_sopen_s(&_fd, _fileName.c_str(), _flags, _S_IREAD | _S_IWRITE, _mode);
+        ::_sopen_s(&_fd, _fileName.c_str(), _flags, _SH_DENYWR, _S_IREAD | _S_IWRITE);
     }
 
     void RollingFileAppender::_append(const LoggingEvent& event) {

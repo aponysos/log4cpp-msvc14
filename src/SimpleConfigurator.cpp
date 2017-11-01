@@ -186,13 +186,13 @@ namespace log4cpp {
                     else if (layout.compare("simple") == 0)
                         appender->setLayout(new log4cpp::SimpleLayout());
                     else if (layout.compare("pattern") == 0) {
-                        log4cpp::PatternLayout *layout =
+                        log4cpp::PatternLayout *patternLayout =
                             new log4cpp::PatternLayout();
 			initFile >> std::ws; // skip whitespace
                         char pattern[1000];
                         initFile.getline(pattern, 1000);
-                        layout->setConversionPattern(std::string(pattern));
-			appender->setLayout(layout);
+                        patternLayout->setConversionPattern(std::string(pattern));
+			appender->setLayout(patternLayout);
                     }
                     else {
                         throw ConfigureFailure("Invalid layout (" + layout +

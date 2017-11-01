@@ -13,6 +13,9 @@
     <Filter Include="include\log4cpp\threading">
       <UniqueIdentifier>{787bbd13-59c2-49ab-b399-7e393d41405f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\hh">
+      <UniqueIdentifier>{88dea622-de61-4568-a300-e559e6234bd8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\Appender.cpp">
@@ -140,21 +143,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\src\Localtime.hh">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\PortabilityImpl.hh">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\Properties.hh">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\PropertyConfiguratorImpl.hh">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\StringUtil.hh">
-      <Filter>src</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\log4cpp\Appender.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
@@ -280,6 +268,21 @@
     </ClInclude>
     <ClInclude Include="..\include\log4cpp\threading\Threading.hh">
       <Filter>include\log4cpp\threading</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\StringUtil.hh">
+      <Filter>src\hh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PropertyConfiguratorImpl.hh">
+      <Filter>src\hh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Properties.hh">
+      <Filter>src\hh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\PortabilityImpl.hh">
+      <Filter>src\hh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Localtime.hh">
+      <Filter>src\hh</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

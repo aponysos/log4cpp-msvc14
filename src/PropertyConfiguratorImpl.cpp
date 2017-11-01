@@ -193,6 +193,13 @@ namespace log4cpp {
         }
     }
 
+    char tolower_char(char c)
+    {
+      if (c <= 'Z' && c >= 'A')
+        return c - ('Z' - 'z');
+      return c;
+    }
+
     Appender* PropertyConfiguratorImpl::instantiateAppender(const std::string& appenderName) {
         Appender* appender = NULL;
         std::string appenderPrefix = std::string("appender.") + appenderName;
@@ -209,7 +216,7 @@ namespace log4cpp {
         // and instantiate the appropriate object
         if (appenderType == "ConsoleAppender") {
             std::string target = _properties.getString(appenderPrefix + ".target", "stdout");
-            std::transform(target.begin(), target.end(), target.begin(), ::tolower);
+            std::transform(target.begin(), target.end(), target.begin(), tolower_char);
             if(target.compare("stdout") == 0) {
                 appender = new OstreamAppender(appenderName, &std::cout);
             }

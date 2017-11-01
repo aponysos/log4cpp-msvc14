@@ -200,6 +200,7 @@
     <ClInclude Include="..\include\log4cpp\LayoutAppender.hh" />
     <ClInclude Include="..\include\log4cpp\LayoutsFactory.hh" />
     <ClInclude Include="..\include\log4cpp\LevelEvaluator.hh" />
+    <ClInclude Include="..\include\log4cpp\log4cpp.h" />
     <ClInclude Include="..\include\log4cpp\LoggingEvent.hh" />
     <ClInclude Include="..\include\log4cpp\Manipulator.hh" />
     <ClInclude Include="..\include\log4cpp\NDC.hh" />

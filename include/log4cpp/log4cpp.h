@@ -1,6 +1,9 @@
 #pragma once
 
-void init_log();
+#include "log4cpp\Category.hh"
+#include "log4cpp\OstreamAppender.hh"
+#include "log4cpp\FileAppender.hh"
+#include "log4cpp\PatternLayout.hh"
 
 #define ROOT_LOG()  (log4cpp::Category::getRoot())
 #define DEBUG_LOG() (ROOT_LOG().debugStream())

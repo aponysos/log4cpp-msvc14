@@ -284,5 +284,8 @@
     <ClInclude Include="..\src\Localtime.hh">
       <Filter>src\hh</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\log4cpp\log4cpp.h">
+      <Filter>include\log4cpp</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

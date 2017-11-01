@@ -18,13 +18,15 @@ namespace log4cpp {
     /**
      * Exception class for configuration.
      */
-    class LOG4CPP_EXPORT ConfigureFailure : public std::runtime_error {
+    class LOG4CPP_EXPORT ConfigureFailure {
         public:
         /**
          * Constructor.
          * @param reason String containing the description of the exception.
          */
         ConfigureFailure(const std::string& reason);
+
+        std::runtime_error innerError;
     };
 }
 

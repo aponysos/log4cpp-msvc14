@@ -33,15 +33,15 @@
 #include <log4cpp/NDC.hh>
 #include <log4cpp/PatternLayout.hh>
 #include <log4cpp/SimpleConfigurator.hh>
-#if LOG4CPP_HAVE_SYSLOG
-#include <log4cpp/SyslogAppender.hh>
-#endif
-#ifndef LOG4CPP_DISABLE_REMOTE_SYSLOG
-#include <log4cpp/RemoteSyslogAppender.hh>
-#endif
-#ifdef WIN32
-#include <log4cpp/NTEventLogAppender.hh>
-#endif
+//#if LOG4CPP_HAVE_SYSLOG
+//#include <log4cpp/SyslogAppender.hh>
+//#endif
+//#ifndef LOG4CPP_DISABLE_REMOTE_SYSLOG
+//#include <log4cpp/RemoteSyslogAppender.hh>
+//#endif
+//#ifdef WIN32
+//#include <log4cpp/NTEventLogAppender.hh>
+//#endif
 
 namespace log4cpp {
 
@@ -126,55 +126,55 @@ namespace log4cpp {
                         appender =
                             new log4cpp::FileAppender(categoryName, ::_dup(_fileno(stderr)));
                     }
-#if LOG4CPP_HAVE_SYSLOG
-                    else if (appenderName.compare("syslog") == 0) {
-                        std::string syslogName;
-                        int facility;
-                        if (!(initFile >> syslogName)) {
-                            throw ConfigureFailure("Missing syslogname for SysLogAppender for category: " + categoryName);
-                        }
-                        if (!(initFile >> facility)) {
-                            facility = LOG_USER;
-                        } else {
-                            // * 8
-                            facility *= 8;
-                        }
-                        appender =
-                            new log4cpp::SyslogAppender(categoryName, syslogName, facility);
-                    } 
-#endif
-#if defined(WIN32)
-                    else if (appenderName.compare("nteventlog") == 0) {
-                        std::string source;
-                        if (!(initFile >> source)) {
-                            throw ConfigureFailure("Missing source for NTEventLogAppender for category: " + categoryName);
-                        }
-                        appender =
-                            new log4cpp::NTEventLogAppender(categoryName, source);
-                    } 
-#endif
-#if !defined(LOG4CPP_DISABLE_REMOTE_SYSLOG)
-                    else if (appenderName.compare("remotesyslog") == 0) {
-                        std::string syslogName;
-                        std::string relayer;
-                        int facility;
-                        int portNumber;
-                        if (!(initFile >> syslogName)) {
-                            throw ConfigureFailure("Missing syslogname for SysLogAppender for category: " + categoryName);
-                        }
-                        if (!(initFile >> relayer)) {
-                            throw ConfigureFailure("Missing syslog host for SysLogAppender for category: " + categoryName);
-                        }
-                        if (!(initFile >> facility)) {
-                            facility = LOG_USER;
-                        }
-                        if (!(initFile >> portNumber)) {
-                            portNumber = 514;
-                        }
-                        appender =
-                            new log4cpp::RemoteSyslogAppender(categoryName, syslogName, relayer, facility, portNumber);
-                    }
-#endif // LOG4CPP_DISABLE_REMOTE_SYSLOG
+//#if LOG4CPP_HAVE_SYSLOG
+//                    else if (appenderName.compare("syslog") == 0) {
+//                        std::string syslogName;
+//                        int facility;
+//                        if (!(initFile >> syslogName)) {
+//                            throw ConfigureFailure("Missing syslogname for SysLogAppender for category: " + categoryName);
+//                        }
+//                        if (!(initFile >> facility)) {
+//                            facility = LOG_USER;
+//                        } else {
+//                            // * 8
+//                            facility *= 8;
+//                        }
+//                        appender =
+//                            new log4cpp::SyslogAppender(categoryName, syslogName, facility);
+//                    } 
+//#endif
+//#if defined(WIN32)
+//                    else if (appenderName.compare("nteventlog") == 0) {
+//                        std::string source;
+//                        if (!(initFile >> source)) {
+//                            throw ConfigureFailure("Missing source for NTEventLogAppender for category: " + categoryName);
+//                        }
+//                        appender =
+//                            new log4cpp::NTEventLogAppender(categoryName, source);
+//                    } 
+//#endif
+//#if !defined(LOG4CPP_DISABLE_REMOTE_SYSLOG)
+//                    else if (appenderName.compare("remotesyslog") == 0) {
+//                        std::string syslogName;
+//                        std::string relayer;
+//                        int facility;
+//                        int portNumber;
+//                        if (!(initFile >> syslogName)) {
+//                            throw ConfigureFailure("Missing syslogname for SysLogAppender for category: " + categoryName);
+//                        }
+//                        if (!(initFile >> relayer)) {
+//                            throw ConfigureFailure("Missing syslog host for SysLogAppender for category: " + categoryName);
+//                        }
+//                        if (!(initFile >> facility)) {
+//                            facility = LOG_USER;
+//                        }
+//                        if (!(initFile >> portNumber)) {
+//                            portNumber = 514;
+//                        }
+//                        appender =
+//                            new log4cpp::RemoteSyslogAppender(categoryName, syslogName, relayer, facility, portNumber);
+//                    }
+//#endif // LOG4CPP_DISABLE_REMOTE_SYSLOG
                     else {
                         throw ConfigureFailure("Invalid appender name (" +
                                                appenderName +

@@ -26,20 +26,20 @@
 #include <log4cpp/FileAppender.hh>
 #include <log4cpp/RollingFileAppender.hh>
 #include <log4cpp/DailyRollingFileAppender.hh>
-#include <log4cpp/AbortAppender.hh>
-#ifdef WIN32
-#include <log4cpp/Win32DebugAppender.hh>
-#include <log4cpp/NTEventLogAppender.hh>
-#endif
-#ifndef LOG4CPP_DISABLE_REMOTE_SYSLOG
-#include <log4cpp/RemoteSyslogAppender.hh>
-#endif // LOG4CPP_DISABLE_REMOTE_SYSLOG
-#ifdef LOG4CPP_HAVE_LIBIDSA
-#include <log4cpp/IdsaAppender.hh>
-#endif	// LOG4CPP_HAVE_LIBIDSA
-#ifdef LOG4CPP_HAVE_SYSLOG
-#include <log4cpp/SyslogAppender.hh>
-#endif
+//#include <log4cpp/AbortAppender.hh>
+//#ifdef WIN32
+//#include <log4cpp/Win32DebugAppender.hh>
+//#include <log4cpp/NTEventLogAppender.hh>
+//#endif
+//#ifndef LOG4CPP_DISABLE_REMOTE_SYSLOG
+//#include <log4cpp/RemoteSyslogAppender.hh>
+//#endif // LOG4CPP_DISABLE_REMOTE_SYSLOG
+//#ifdef LOG4CPP_HAVE_LIBIDSA
+//#include <log4cpp/IdsaAppender.hh>
+//#endif	// LOG4CPP_HAVE_LIBIDSA
+//#ifdef LOG4CPP_HAVE_SYSLOG
+//#include <log4cpp/SyslogAppender.hh>
+//#endif
 
 // layouts
 #include <log4cpp/Layout.hh>
@@ -239,46 +239,46 @@ namespace log4cpp {
             bool append = _properties.getBool(appenderPrefix + ".append", true);
             appender = new DailyRollingFileAppender(appenderName, fileName, maxDaysKeep, append);
         }
-#ifndef LOG4CPP_DISABLE_REMOTE_SYSLOG
-        else if (appenderType == "SyslogAppender") {
-            std::string syslogName = _properties.getString(appenderPrefix + ".syslogName", "syslog");
-            std::string syslogHost = _properties.getString(appenderPrefix + ".syslogHost", "localhost");
-            int facility = _properties.getInt(appenderPrefix + ".facility", -1) * 8; // * 8 to get LOG_KERN, etc. compatible values. 
-            int portNumber = _properties.getInt(appenderPrefix + ".portNumber", -1);
-            appender = new RemoteSyslogAppender(appenderName, syslogName, 
-                                                syslogHost, facility, portNumber);
-        }
-#endif // LOG4CPP_DISABLE_REMOTE_SYSLOG
-#ifdef LOG4CPP_HAVE_SYSLOG
-        else if (appenderType == "LocalSyslogAppender") {
-            std::string syslogName = _properties.getString(appenderPrefix + ".syslogName", "syslog");
-            int facility = _properties.getInt(appenderPrefix + ".facility", -1) * 8; // * 8 to get LOG_KERN, etc. compatible values. 
-            appender = new SyslogAppender(appenderName, syslogName, facility);
-        }
-#endif // LOG4CPP_HAVE_SYSLOG
-        else if (appenderType == "AbortAppender") {
-            appender = new AbortAppender(appenderName);
-        }
-#ifdef LOG4CPP_HAVE_LIBIDSA
-        else if (appenderType == "IdsaAppender") {
-            // default idsa name ???
-            std::string idsaName = _properties.getString(appenderPrefix + ".idsaName", "foobar");
-
-            appender = new IdsaAppender(appenderName, idsaname);
-        }
-#endif	// LOG4CPP_HAVE_LIBIDSA
-
-#ifdef WIN32
-        // win32 debug appender
-        else if (appenderType == "Win32DebugAppender") {
-            appender = new Win32DebugAppender(appenderName);
-        }
-        // win32 NT event log appender
-        else if (appenderType == "NTEventLogAppender") {
-            std::string source = _properties.getString(appenderPrefix + ".source", "foobar");
-            appender = new NTEventLogAppender(appenderName, source);
-        }
-#endif	// WIN32
+//#ifndef LOG4CPP_DISABLE_REMOTE_SYSLOG
+//        else if (appenderType == "SyslogAppender") {
+//            std::string syslogName = _properties.getString(appenderPrefix + ".syslogName", "syslog");
+//            std::string syslogHost = _properties.getString(appenderPrefix + ".syslogHost", "localhost");
+//            int facility = _properties.getInt(appenderPrefix + ".facility", -1) * 8; // * 8 to get LOG_KERN, etc. compatible values. 
+//            int portNumber = _properties.getInt(appenderPrefix + ".portNumber", -1);
+//            appender = new RemoteSyslogAppender(appenderName, syslogName, 
+//                                                syslogHost, facility, portNumber);
+//        }
+//#endif // LOG4CPP_DISABLE_REMOTE_SYSLOG
+//#ifdef LOG4CPP_HAVE_SYSLOG
+//        else if (appenderType == "LocalSyslogAppender") {
+//            std::string syslogName = _properties.getString(appenderPrefix + ".syslogName", "syslog");
+//            int facility = _properties.getInt(appenderPrefix + ".facility", -1) * 8; // * 8 to get LOG_KERN, etc. compatible values. 
+//            appender = new SyslogAppender(appenderName, syslogName, facility);
+//        }
+//#endif // LOG4CPP_HAVE_SYSLOG
+//        else if (appenderType == "AbortAppender") {
+//            appender = new AbortAppender(appenderName);
+//        }
+//#ifdef LOG4CPP_HAVE_LIBIDSA
+//        else if (appenderType == "IdsaAppender") {
+//            // default idsa name ???
+//            std::string idsaName = _properties.getString(appenderPrefix + ".idsaName", "foobar");
+//
+//            appender = new IdsaAppender(appenderName, idsaname);
+//        }
+//#endif	// LOG4CPP_HAVE_LIBIDSA
+//
+//#ifdef WIN32
+//        // win32 debug appender
+//        else if (appenderType == "Win32DebugAppender") {
+//            appender = new Win32DebugAppender(appenderName);
+//        }
+//        // win32 NT event log appender
+//        else if (appenderType == "NTEventLogAppender") {
+//            std::string source = _properties.getString(appenderPrefix + ".source", "foobar");
+//            appender = new NTEventLogAppender(appenderName, source);
+//        }
+//#endif	// WIN32
         else {
             throw ConfigureFailure(std::string("Appender '") + appenderName + 
                                    "' has unknown type '" + appenderType + "'");

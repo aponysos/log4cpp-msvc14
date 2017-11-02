@@ -286,7 +286,11 @@ namespace log4cpp {
 
         char ch;
         PatternLayout::PatternComponent* component = NULL;
+#ifdef _WIN64
+        __int64 minWidth = 0;
+#else
         int minWidth = 0;
+#endif
         size_t maxWidth = 0;
         clearConversionPattern();
         while (conversionStream.get(ch)) {

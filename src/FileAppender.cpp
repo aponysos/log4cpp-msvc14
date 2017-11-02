@@ -78,7 +78,7 @@ namespace log4cpp {
 
     void FileAppender::_append(const LoggingEvent& event) {
         std::string message(_getLayout().format(event));
-        if (!::_write(_fd, message.data(), message.length())) {
+        if (!::_write(_fd, message.data(), static_cast<unsigned int>(message.length()))) {
             // XXX help! help!
         }
     }

@@ -10,6 +10,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log4cpp-test", "log4cpp-tes
 		{1CF09EC7-21F1-4122-9509-9598F3209AFC} = {1CF09EC7-21F1-4122-9509-9598F3209AFC}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log4cpplib", "log4cpplib\log4cpplib.vcxproj", "{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "log4cpplib-test", "log4cpplib-test\log4cpplib-test.vcxproj", "{CD4F483D-B562-4489-980F-2956BC33AFE9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D} = {5C9B2DF1-CD40-4735-9D04-ECC1F136831D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -38,6 +45,22 @@ Global
 		{CDC700EB-C8F2-4BE4-823F-C9440F5EFCC6}.Release|Win32.Deploy.0 = Release|Win32
 		{CDC700EB-C8F2-4BE4-823F-C9440F5EFCC6}.Release|x64.ActiveCfg = Release|x64
 		{CDC700EB-C8F2-4BE4-823F-C9440F5EFCC6}.Release|x64.Build.0 = Release|x64
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Debug|Win32.Build.0 = Debug|Win32
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Debug|x64.ActiveCfg = Debug|x64
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Debug|x64.Build.0 = Debug|x64
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Release|Win32.ActiveCfg = Release|Win32
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Release|Win32.Build.0 = Release|Win32
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Release|x64.ActiveCfg = Release|x64
+		{5C9B2DF1-CD40-4735-9D04-ECC1F136831D}.Release|x64.Build.0 = Release|x64
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Debug|Win32.Build.0 = Debug|Win32
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Debug|x64.ActiveCfg = Debug|x64
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Debug|x64.Build.0 = Debug|x64
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Release|Win32.ActiveCfg = Release|Win32
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Release|Win32.Build.0 = Release|Win32
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Release|x64.ActiveCfg = Release|x64
+		{CD4F483D-B562-4489-980F-2956BC33AFE9}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

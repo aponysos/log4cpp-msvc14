@@ -48,9 +48,6 @@
     <ClCompile Include="..\src\DllMain.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\DummyThreads.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\FactoryParams.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -90,9 +87,6 @@
     <ClCompile Include="..\src\NDC.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\OmniThreads.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\OstreamAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -117,9 +111,6 @@
     <ClCompile Include="..\src\PropertyConfiguratorImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\PThreads.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\RollingFileAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -136,9 +127,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\TriggeringEventEvaluatorFactory.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\snprintf.c">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
@@ -251,19 +239,7 @@
     <ClInclude Include="..\include\log4cpp\TriggeringEventEvaluatorFactory.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\BoostThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\DummyThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\log4cpp\threading\MSThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\OmniThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\PThreads.hh">
       <Filter>include\log4cpp\threading</Filter>
     </ClInclude>
     <ClInclude Include="..\include\log4cpp\threading\Threading.hh">

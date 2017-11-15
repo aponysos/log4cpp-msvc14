@@ -53,11 +53,7 @@
     <ClInclude Include="..\include\log4cpp\RollingFileAppender.hh" />
     <ClInclude Include="..\include\log4cpp\SimpleConfigurator.hh" />
     <ClInclude Include="..\include\log4cpp\SimpleLayout.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\BoostThreads.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\DummyThreads.hh" />
     <ClInclude Include="..\include\log4cpp\threading\MSThreads.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\OmniThreads.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\PThreads.hh" />
     <ClInclude Include="..\include\log4cpp\threading\Threading.hh" />
     <ClInclude Include="..\include\log4cpp\TimeStamp.hh" />
     <ClInclude Include="..\include\log4cpp\TriggeringEventEvaluator.hh" />

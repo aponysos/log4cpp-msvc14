@@ -129,19 +129,7 @@
     <ClInclude Include="..\include\log4cpp\TriggeringEventEvaluatorFactory.hh">
       <Filter>include\log4cpp</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\BoostThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\DummyThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
     <ClInclude Include="..\include\log4cpp\threading\MSThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\OmniThreads.hh">
-      <Filter>include\log4cpp\threading</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\log4cpp\threading\PThreads.hh">
       <Filter>include\log4cpp\threading</Filter>
     </ClInclude>
     <ClInclude Include="..\include\log4cpp\threading\Threading.hh">

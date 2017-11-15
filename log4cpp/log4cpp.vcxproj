@@ -91,7 +91,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;HAVE_SNPRINTF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -105,7 +105,7 @@
       <SDLCheck>true</SDLCheck>
       <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;HAVE_SNPRINTF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -116,7 +116,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;HAVE_SNPRINTF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <TreatWarningAsError>true</TreatWarningAsError>
     </ClCompile>
     <Link>
@@ -134,7 +134,7 @@
       <SDLCheck>true</SDLCheck>
       <TreatWarningAsError>true</TreatWarningAsError>
       <AdditionalIncludeDirectories>$(SolutionDir)include</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;HAVE_SNPRINTF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>LOG4CPP_HAS_DLL;LOG4CPP_BUILD_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -152,7 +152,6 @@
     <ClCompile Include="..\src\Configurator.cpp" />
     <ClCompile Include="..\src\DailyRollingFileAppender.cpp" />
     <ClCompile Include="..\src\DllMain.cpp" />
-    <ClCompile Include="..\src\DummyThreads.cpp" />
     <ClCompile Include="..\src\FactoryParams.cpp" />
     <ClCompile Include="..\src\FileAppender.cpp" />
     <ClCompile Include="..\src\Filter.cpp" />
@@ -166,7 +165,6 @@
     <ClCompile Include="..\src\Manipulator.cpp" />
     <ClCompile Include="..\src\MSThreads.cpp" />
     <ClCompile Include="..\src\NDC.cpp" />
-    <ClCompile Include="..\src\OmniThreads.cpp" />
     <ClCompile Include="..\src\OstreamAppender.cpp" />
     <ClCompile Include="..\src\PassThroughLayout.cpp" />
     <ClCompile Include="..\src\PatternLayout.cpp" />
@@ -175,11 +173,9 @@
     <ClCompile Include="..\src\Properties.cpp" />
     <ClCompile Include="..\src\PropertyConfigurator.cpp" />
     <ClCompile Include="..\src\PropertyConfiguratorImpl.cpp" />
-    <ClCompile Include="..\src\PThreads.cpp" />
     <ClCompile Include="..\src\RollingFileAppender.cpp" />
     <ClCompile Include="..\src\SimpleConfigurator.cpp" />
     <ClCompile Include="..\src\SimpleLayout.cpp" />
-    <ClCompile Include="..\src\snprintf.c" />
     <ClCompile Include="..\src\StringUtil.cpp" />
     <ClCompile Include="..\src\TimeStamp.cpp" />
     <ClCompile Include="..\src\TriggeringEventEvaluatorFactory.cpp" />
@@ -219,11 +215,7 @@
     <ClInclude Include="..\include\log4cpp\RollingFileAppender.hh" />
     <ClInclude Include="..\include\log4cpp\SimpleConfigurator.hh" />
     <ClInclude Include="..\include\log4cpp\SimpleLayout.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\BoostThreads.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\DummyThreads.hh" />
     <ClInclude Include="..\include\log4cpp\threading\MSThreads.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\OmniThreads.hh" />
-    <ClInclude Include="..\include\log4cpp\threading\PThreads.hh" />
     <ClInclude Include="..\include\log4cpp\threading\Threading.hh" />
     <ClInclude Include="..\include\log4cpp\TimeStamp.hh" />
     <ClInclude Include="..\include\log4cpp\TriggeringEventEvaluator.hh" />

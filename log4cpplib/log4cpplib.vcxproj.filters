@@ -191,12 +191,6 @@
     <ClCompile Include="..\src\DailyRollingFileAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\DllMain.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\DummyThreads.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\FactoryParams.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -236,9 +230,6 @@
     <ClCompile Include="..\src\NDC.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\OmniThreads.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\OstreamAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -263,9 +254,6 @@
     <ClCompile Include="..\src\PropertyConfiguratorImpl.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\PThreads.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\RollingFileAppender.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -273,9 +261,6 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\SimpleLayout.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\snprintf.c">
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="..\src\StringUtil.cpp">
